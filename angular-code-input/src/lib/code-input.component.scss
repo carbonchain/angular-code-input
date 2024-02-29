@@ -22,10 +22,9 @@
   span {
     display: block;
     flex: 1;
-    padding-right: var(--item-spacing);
 
-    &:first-child {
-      padding-left: var(--item-spacing);
+    &:not(:last-child) {
+      padding-right: var(--item-spacing);
     }
 
     &.code-hidden input {
@@ -50,6 +49,7 @@
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     outline: none;
+    box-sizing: border-box;
 
     &.has-value {
       border: var(--item-border-has-value);
